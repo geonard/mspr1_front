@@ -1,0 +1,13 @@
+/* Home Page CSS */
+.home-page {
+    padding: 20px; /* Espacement autour du contenu */
+    background-color: #f0f0f0; /* Couleur de fond de la page */
+  }
+  
+  /* Style du titre de la page Home */
+  .home-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Espacement sous le titre */
+  }
+  

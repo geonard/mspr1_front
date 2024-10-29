@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Nation-sounds",
+    "slug": "nation-sounds",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "main": "index.js",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lambert81.yourapp"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": null,
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/Lemmy.png",
+      "name": "Nation Sounds"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9899aef8-a72e-42c9-952f-3009d4838ec6"
+      }
+    }
+  }
+}

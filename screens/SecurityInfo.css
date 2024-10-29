@@ -1,0 +1,39 @@
+.security-info-container {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000; /* Assure que le message est au-dessus de tout autre contenu */
+  animation: blink 1s infinite; /* Animation pour le clignotement */
+}
+
+.security-info-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0;
+  font-size:50px;
+}
+
+.security-info-text {
+  font-size: 50px; /* Taille du texte pour attirer l'attention */
+  font-weight: bold;
+}
+
+.security-info-link {
+  color: yellow;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+/* Animation de clignotement */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}

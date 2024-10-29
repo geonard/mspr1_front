@@ -1,0 +1,17 @@
+/* Exemple : CSS pour le conteneur parent de la barre de navigation */
+.navbar-container {
+    position: relative; /* Position relative pour que les enfants positionnés absolument se basent sur ce conteneur */
+  }
+  
+  /* Exemple : CSS pour le composant NewsList */
+  .news-list-container {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    background-color: white; /* Arrière-plan pour le composant */
+    padding: 20px;
+    border: 1px solid #ccc; /* Bordure pour délimiter le composant */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+    z-index: 1000; /* Assure que le composant est au-dessus d'autres éléments */
+  }
+  

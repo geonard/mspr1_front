@@ -1,0 +1,61 @@
+.partners-container {
+    position: relative;
+    top: 100px;
+    left: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(173, 168, 168);
+    border-radius: 10px;
+    border:2px solid black;
+    overflow-y: auto; /* Pour le défilement si nécessaire */
+    max-height: 80vh; /* Pour éviter que la liste ne dépasse l'écran */
+}
+
+.partner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border:2px solid black;
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Arrière-plan gris clair pour les partenaires */
+}
+
+.partner-logo-container {
+    margin-right: 20px; /* Espace entre le logo et le texte */
+}
+
+.partner-logo {
+    width: 100px;
+    height: auto;
+}
+
+.partner-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.partner-name {
+    font-weight: bold;
+    margin: 0;
+}
+
+.partner-category {
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.partner-category.média {
+    background-color: #e0e0e0; /* Gris pour Média */
+}
+
+.partner-category.alimentaire {
+    background-color: #d0d0d0; /* Gris clair pour Alimentaire */
+}
+
+.partner-category.logistique {
+    background-color: #c0c0c0; /* Gris encore plus clair pour Logistique */
+}

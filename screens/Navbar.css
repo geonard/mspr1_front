@@ -1,0 +1,80 @@
+/* Navbar.css */
+
+/* Barre de navigation principale */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Hauteur de la navbar */
+  background-color: #333; /* Couleur de fond de la navbar */
+  z-index: 1000; /* S'assurer que la navbar est au-dessus des autres éléments */
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* Espacement intérieur */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
+}
+
+/* Conteneur pour le contenu de la navbar */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Icône du menu hamburger */
+.navbar-hamburger {
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.navbar-logo {
+  
+}
+.navbar-logo img {
+width:98px;
+height:auto;
+}
+
+/* Menu de la navbar */
+.navbar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 60px; /* Juste en dessous de la navbar */
+  left: 0;
+  width: 100%;
+  background-color: #444; /* Couleur de fond du menu */
+  display: none; /* Cacher le menu par défaut */
+}
+
+/* Afficher le menu lorsque le hamburger est ouvert */
+.navbar-menu.open {
+  display: block;
+}
+
+/* Éléments du menu */
+.navbar-menu li {
+  padding: 10px 20px;
+}
+
+.navbar-menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+/* Effet au survol des éléments du menu */
+.navbar-menu li a:hover {
+  background-color: #555;
+}
+
+/* Styles responsive */
+@media screen and (max-width: 768px) {
+  .navbar-hamburger {
+    display: block;
+  }
+}

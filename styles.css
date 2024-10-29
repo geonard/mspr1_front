@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    margin: 1rem;
+}
+
+#show-program {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#main-content {
+    padding: 1rem;
+}
+
+.concert {
+    margin-bottom: 1rem;
+}
+
+.concert img {
+    max-width: 100px;
+    height: auto;
+}

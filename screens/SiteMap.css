@@ -1,0 +1,25 @@
+
+.controls {
+  display: flex;
+  align-items: center; /* Aligne verticalement les éléments */
+  margin-bottom: 10px; /* Un peu d'espace en bas */
+}
+
+.fullscreen-toggle {
+  margin-right: 10px; /* Espace entre le bouton plein écran et les listes déroulantes */
+}
+
+.select {
+  margin-right: 10px; /* Espace entre les listes déroulantes */
+}
+
+.map-container {
+  width: 100vw; /* 100% de la largeur de la fenêtre */
+  height: 100vh; /* 100% de la hauteur de la fenêtre */
+  position: relative;
+}
+
+.map {
+  width: 100%;  /* S'assure que la carte occupe toute la largeur */
+  height: 100%; /* S'assure que la carte occupe toute la hauteur */
+}
