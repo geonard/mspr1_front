@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Picker, Linking } from 'react-native';
 import axios from 'axios';
-import API_URL from './config';
+import API_URL from './config'; // Vérifiez que le chemin est correct
 
 export default function Group() {
   const [faqData, setFaqData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedGenre, setSelecwtedGenre] = useState('');
+  const [selectedGenre, setSelectedGenre] = useState('');
 
   const fetchFaqData = async () => {
     try {
-      const response = await axios.get(`${API_URL}/groups`);
+      const response = await axios.get(`${API_URL}/groups`); // Utilise l'adresse IP correcte
       setFaqData(response.data);
     } catch (error) {
       setError('Erreur lors de la récupération des groupes.');
@@ -59,13 +59,12 @@ export default function Group() {
             <View style={styles.groupRow} key={item.id}>
               <View style={styles.groupCol}>
                 <TouchableOpacity onPress={() => Linking.openURL(item.link)}>
-                  <Image source={{ uri: `${API_URL}/imagesGroup/${item.image}` }} style={styles.groupImage} />
+                  <Image source={{ uri: item.image }} style={styles.groupImage} />
                 </TouchableOpacity>
               </View>
               <View style={styles.groupCol}>
                 <TouchableOpacity onPress={() => Linking.openURL(item.link)}>
                   <Text style={styles.groupName}>{item.name}</Text>
-                  <Text style={styles.detailsItem}>{item.genre}</Text>
                 </TouchableOpacity>
               </View>
               <View style={styles.groupCol}>
@@ -73,10 +72,7 @@ export default function Group() {
                   {item.scene ? `Scène: ${item.scene}` : 'Scène inconnue'}
                 </Text>
                 <Text style={styles.detailsItem}>
-                  {item.start ? `Heure de début: ${item.start}` : 'Heure de début inconnue'}
-                </Text>
-                <Text style={styles.detailsItem}>
-                  {item.end ? `Heure de fin: ${item.end}` : 'Heure de fin inconnue'}
+                  {item.time ? `Heure: ${item.time}` : 'Heure inconnue'}
                 </Text>
                 <Text style={styles.detailsItem}>
                   {item.date ? `Date: ${item.date}` : 'Date inconnue'}
@@ -93,5 +89,66 @@ export default function Group() {
 }
 
 const styles = StyleSheet.create({
-  // Vos styles ici...
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#f9f9f9',
+  },
+  selectorContainer: {
+    marginBottom: 20,
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  picker: {
+    height: 50,
+    width: '100%',
+    backgroundColor: 'yellow',
+  },
+  scrollView: {
+    height: 210,
+  },
+  scrollViewContent: {
+    flexGrow: 1,
+  },
+  groupRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+    paddingVertical: 10,
+  },
+  groupCol: {
+    flex: 1,
+    marginRight: 10,
+  },
+  groupImage: {
+    width: 100,
+    height: 100,
+    resizeMode: 'cover',
+  },
+  groupName: {
+    fontSize: 18,
+    color: '#007BFF',
+  },
+  detailsItem: {
+    fontSize: 14,
+    color: '#333',
+  },
+  noDataText: {
+    fontSize: 16,
+    color: '#888',
+    textAlign: 'center',
+    marginVertical: 20,
+  },
+  loadingText: {
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  errorText: {
+    fontSize: 16,
+    color: 'red',
+    textAlign: 'center',
+  },
 });
